@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dotnet-env-service
+spec:
+  type: NodePort   # so you can access from browser
+  selector:
+    app: dotnet-env-app
+  ports:
+    - port: 80         # Service port
+      targetPort: 80   # Container port
+      nodePort: 30007    # Optional fixed port, else Kubernetes picks random (30000–32767)

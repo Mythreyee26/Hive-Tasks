@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dotnet-env-config
+data:
+  ASPNETCORE_ENVIRONMENT: "Docker"
+  Database__ConnectionString: "Docker_connection_to_go"

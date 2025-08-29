@@ -1,0 +1,30 @@
+# Build outputs
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+
+# VS Code / IDE folders
+.vscode/
+.vs/
+
+# NuGet packages
+*.nupkg
+packages/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+*.DS_Store
+
+# Git
+.git/
+.gitignore
+
+# Dockerfile itself or other Docker files not needed in context (optional)
+Dockerfile.dev
