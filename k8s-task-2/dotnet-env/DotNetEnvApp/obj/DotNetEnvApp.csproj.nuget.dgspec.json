@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mythu\\Desktop\\Hive-learning\\k8s-task-2\\dotnet-env\\DotNetEnvApp\\DotNetEnvApp.csproj": {}
+    "C:\\Users\\mythu\\Desktop\\Hive-Tasks\\k8s-task-2\\dotnet-env\\DotNetEnvApp\\DotNetEnvApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mythu\\Desktop\\Hive-learning\\k8s-task-2\\dotnet-env\\DotNetEnvApp\\DotNetEnvApp.csproj": {
+    "C:\\Users\\mythu\\Desktop\\Hive-Tasks\\k8s-task-2\\dotnet-env\\DotNetEnvApp\\DotNetEnvApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mythu\\Desktop\\Hive-learning\\k8s-task-2\\dotnet-env\\DotNetEnvApp\\DotNetEnvApp.csproj",
+        "projectUniqueName": "C:\\Users\\mythu\\Desktop\\Hive-Tasks\\k8s-task-2\\dotnet-env\\DotNetEnvApp\\DotNetEnvApp.csproj",
         "projectName": "DotNetEnvApp",
-        "projectPath": "C:\\Users\\mythu\\Desktop\\Hive-learning\\k8s-task-2\\dotnet-env\\DotNetEnvApp\\DotNetEnvApp.csproj",
+        "projectPath": "C:\\Users\\mythu\\Desktop\\Hive-Tasks\\k8s-task-2\\dotnet-env\\DotNetEnvApp\\DotNetEnvApp.csproj",
         "packagesPath": "C:\\Users\\mythu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mythu\\Desktop\\Hive-learning\\k8s-task-2\\dotnet-env\\DotNetEnvApp\\obj\\",
+        "outputPath": "C:\\Users\\mythu\\Desktop\\Hive-Tasks\\k8s-task-2\\dotnet-env\\DotNetEnvApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mythu\\AppData\\Roaming\\NuGet\\NuGet.Config"
