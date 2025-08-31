@@ -30,7 +30,7 @@ ingress:
   className: ""
   annotations: {}
   hosts:
-    - host: nginx-webapp.local
+    - host: nginx.local
       paths:
         - path: /
           pathType: Prefix
