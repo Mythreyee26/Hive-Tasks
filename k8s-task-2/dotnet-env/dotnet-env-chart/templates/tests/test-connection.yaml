@@ -1,0 +1,20 @@
+{{- if .Values.test.enabled }}
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ include "dotnet-env.fullname" . }}-test-connection
+spec:
+  backoffLimit: 1
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: curl
+          image: curlimages/curl:latest
+          command:
+            - sh
+            - -c
+            - |
+              echo "Testing service reachability..."
+              curl -sS http://{{ include "dotnet-env.fullname" . }}-svc:{{ .Values.service.port }} || (echo "FAIL" && exit 1)
+{{- end }}

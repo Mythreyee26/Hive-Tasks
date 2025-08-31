@@ -1,0 +1,6 @@
+apiVersion: v2
+name: nginx-webapp
+description: A Helm chart for Nginx default webpage in .NET application
+type: application
+version: 0.1.0
+appVersion: "1.25.0"

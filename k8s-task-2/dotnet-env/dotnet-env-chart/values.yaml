@@ -1,0 +1,61 @@
+# Default values for dotnet-env chart
+replicaCount: 2
+
+appName: dotnet-env-app
+
+image:
+  repository: mythreyeegp/dotnetapp
+  tag: v2
+  pullPolicy: IfNotPresent
+
+containerPort: 80
+
+service:
+  type: NodePort
+  port: 80
+  targetPort: 80
+  nodePort: 30007
+
+serviceAccount:
+  create: true
+  name: ""
+
+configMap:
+  enabled: true
+  name: dotnet-env-config
+  data:
+    ASPNETCORE_ENVIRONMENT: "Docker"
+    Database__ConnectionString: "Docker_connection_to_go"
+
+secret:
+  create: true
+  name: dotnet-env-secret
+  # stringData - plain strings will be encoded by k8s
+  data:
+    ASPNETCORE_ENVIRONMENT: "Docker"
+    Database__ConnectionString: "Docker_connection_to_go"
+
+resources: {}
+
+nodeSelector: {}
+tolerations: []
+affinity: {}
+
+ingress:
+  enabled: true
+  className: "nginx"
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+  hosts:
+    - host: dotnet-env.local
+      paths: ["/"]
+  tls: []
+
+hpa:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 50
+
+test:
+  enabled: true
