@@ -16,7 +16,16 @@ kubectl get svc -n dotnet
 kubectl get ingress -n dotnet
 
 
-kubectl patch svc dotnet-env-dotnet-env-svc -n dotnet \ -p '{"spec": {"type": "LoadBalancer"}}'
+<!-- kubectl patch svc dotnet-env-dotnet-env-svc -n dotnet \ -p '{"spec": {"type": "LoadBalancer"}}' -->
+
+helm upgrade --install dotnet-env ./dotnet-env-chart -n dotnet \
+  --set image.repository=mythreyeegp/dotnetapp \
+  --set image.tag=v2 \
+  --set service.type=LoadBalancer \
+  --set service.port=80 \
+  --set containerPort=80 \
+  --set livenessProbe.httpGet.port=80 \
+  --set readinessProbe.httpGet.port=80
 
 kubectl get svc -n dotnet
 minikube tunnel
